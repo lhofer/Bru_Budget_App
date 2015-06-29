@@ -1,0 +1,17 @@
+<%= form_for([@user, @cost]) do |f| %>
+  <p>
+    <%= f.label :item %><br>
+    <%= f.text_field :item %>
+  </p>
+  <p>
+    <%= f.label :cost %><br>
+    <%= f.text_area :cost %>
+  </p>
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

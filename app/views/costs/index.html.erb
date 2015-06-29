@@ -1,0 +1,28 @@
+<h1><%= @user.email %>'s Costs</h1>
+
+<table>
+	<tr>
+		<th>Item</th>
+		<th>Cost</th>
+		<th>Location</th>
+		<th>Date</th>
+		<th cospan="4"></th>
+	</tr>
+	<tr>
+		<% @costs.each do |cost| %>
+
+			<td><%= cost.item %></td>
+			<td><%= cost.cost %></td>
+			<td><%= cost.location %></td>
+			<td><%= cost.created_at.to_date %></td>
+			<td><%= link_to 'Edit', edit_user_cost_path(cost.user, cost) %></td>
+			<td><%= link_to 'Show', user_cost_path(cost.user, cost) %></td>
+			<td><%= link_to 'Delete', user_cost_path(cost.user, cost),
+				method: :delete,
+				data: {confirm: 'Did you pay your credit card bill?'} %></td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'New Cost', new_user_cost_path(@user) %>
+
