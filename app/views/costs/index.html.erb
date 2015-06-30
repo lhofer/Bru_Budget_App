@@ -1,4 +1,4 @@
-<h1><%= @user.email %>'s Costs</h1>
+<h1><%= current_user.email %>'s Costs</h1>
 
 <table>
 	<tr>
@@ -15,14 +15,14 @@
 			<td><%= cost.cost %></td>
 			<td><%= cost.location %></td>
 			<td><%= cost.created_at.to_date %></td>
-			<td><%= link_to 'Edit', edit_user_cost_path(cost.user, cost) %></td>
-			<td><%= link_to 'Show', user_cost_path(cost.user, cost) %></td>
-			<td><%= link_to 'Delete', user_cost_path(cost.user, cost),
+			<td><%= link_to 'Edit', edit_user_cost_path(current_user, cost) %></td>
+			<td><%= link_to 'Show', user_cost_path(current_user, cost) %></td>
+			<td><%= link_to 'Delete', user_costs_path(current_user, cost),
 				method: :delete,
 				data: {confirm: 'Did you pay your credit card bill?'} %></td>
 		</tr>
 	<% end %>
 </table>
 
-<%= link_to 'New Cost', new_user_cost_path(@user) %>
+<%= link_to 'New Cost', new_user_cost_path(current_user) %>
 
