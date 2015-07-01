@@ -1,28 +1,56 @@
-<h1><%= current_user.email %>'s Costs</h1>
 
-<table>
-	<tr>
-		<th>Item</th>
-		<th>Cost</th>
-		<th>Location</th>
-		<th>Date</th>
-		<th cospan="4"></th>
-	</tr>
-	<tr>
-		<% @costs.each do |cost| %>
 
-			<td><%= cost.item %></td>
-			<td><%= cost.cost %></td>
-			<td><%= cost.location %></td>
-			<td><%= cost.created_at.to_date %></td>
-			<td><%= link_to 'Edit', edit_user_cost_path(current_user, cost) %></td>
-			<td><%= link_to 'Show', user_cost_path(current_user, cost) %></td>
-			<td><%= link_to 'Delete', user_cost_path(current_user, cost),
-				method: :delete,
-				data: {confirm: 'Did you pay your credit card bill?'} %></td>
-		</tr>
-	<% end %>
-</table>
 
-<%= link_to 'New Cost', new_user_cost_path(current_user) %>
+<!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Cost Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <table>
+				<tr>
+					<th>Item</th>
+					<th>Cost</th>
+					<th>Location</th>
+					<th>Date</th>
+					<th cospan="4"></th>
+				</tr>
+				<tr>
+					<% @costs.each do |cost| %>
 
+						<td><%= cost.item %></td>
+						<td><%= cost.cost %></td>
+						<td><%= cost.location %></td>
+						<td><%= cost.created_at.to_date %></td>
+						<td><%= link_to 'Edit', edit_user_cost_path(current_user, cost) %></td>
+						<td><%= link_to 'Show', user_cost_path(current_user, cost) %></td>
+						<td><%= link_to 'Delete', user_cost_path(current_user, cost),
+							method: :delete,
+							data: {confirm: 'Did you pay your credit card bill?'} %></td>
+					</tr>
+				<% end %>
+				<%= link_to 'New Cost', new_user_cost_path(current_user) %>
+
+			</table>
+            <div class="row">
+	            <% @costs.each do |cost| %>
+	                <div class="col-sm-4 portfolio-item">
+	                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+	                        <div class="caption">
+	                            <div class="caption-content">
+	                            <%= cost.item %>
+	                            <%= cost.cost %>
+	                            <%= cost.created_at.to_date %>
+	                                <i class="fa fa-search-plus fa-3x"><%= cost.item %></i>
+	                            </div>
+	                        </div>
+	                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+	                    </a>
+	                </div>
+	            <% end %>
+            </div>
+        </div>
+    </section>
