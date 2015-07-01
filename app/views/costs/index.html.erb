@@ -17,7 +17,7 @@
 			<td><%= cost.created_at.to_date %></td>
 			<td><%= link_to 'Edit', edit_user_cost_path(current_user, cost) %></td>
 			<td><%= link_to 'Show', user_cost_path(current_user, cost) %></td>
-			<td><%= link_to 'Delete', user_costs_path(current_user, cost),
+			<td><%= link_to 'Delete', user_cost_path(current_user, cost),
 				method: :delete,
 				data: {confirm: 'Did you pay your credit card bill?'} %></td>
 		</tr>

@@ -18,7 +18,7 @@ class CostsController < ApplicationController
   end
 
   def edit
-  	@cost = Cost.find(params[:id])
+  	@cost = current_user.costs.find(params[:id])
   end
 
   def update
