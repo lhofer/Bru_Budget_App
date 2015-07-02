@@ -23,3 +23,7 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+production:
+  <<: *default
+  database: bru_budget_production
+
