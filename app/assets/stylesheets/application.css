@@ -12,13 +12,12 @@
  *
  *= require_tree .
  *= require_self
- *= css/bootstrap.min.css
- *= css/freelancer.css
- *= font-awesome/css/font-awesome.min.css
- *= require_freelancer.css
+ *= require bootstrap.min.css
+ *= require freelancer.css
+
 
  */
-
+/*
  body {
     overflow-x: hidden;
 }
@@ -471,4 +470,4 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
-}
+}*/

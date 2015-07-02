@@ -10,16 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//≈ js/freelancer.js
-//≈ js/contact_me.js
-//≈ js/jqBootstrapValidation.js
-//≈ js/cbpAnimatedHeader.js
-//≈ js/classie.js
-//≈ http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js
-//≈ js/bootstrap.min.js
-//≈ js/jquery.js
-//≈ require jquery
-//= require jquery_ujs
-//= require twitter/bootstrap
-//= require turbolinks
 //= require_tree .
+//≈ require freelancer.js
+//≈ require contact_me.js
+//≈ require jqBootstrapValidation.js
+//≈ require cbpAnimatedHeader.js
+//≈ require classie.js
+//= require twitter/bootstrap
+//≈ http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js
+//= require jquery_ujs
+//= require turbolinks

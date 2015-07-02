@@ -5,16 +5,16 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  #adapter: sqlite3
+  #adapter: postgresql
+  adapter: sqlite3
   pool: 5
   #encoding: unicode
   timeout: 5000
 
 development:
   <<: *default
-  #database: db/development.sqlite3
-  database: bru_budget_development
+  database: db/development.sqlite3
+  #database: bru_budget_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
